@@ -1,7 +1,9 @@
+import ContactsList from "./pages/ContactsList";
+
 function App() {
   return (
     <>
-      <h1>Hrll</h1>
+      <ContactsList />
     </>
   );
 }
