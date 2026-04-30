@@ -1,3 +1,4 @@
+import ContactItem from "../components/ContactItem";
 import { useContacts } from "../hooks/useContacts";
 // import { Link } from "react-router-dom";
 export default function ContactsList() {
@@ -27,15 +28,7 @@ export default function ContactsList() {
         </thead>
         <tbody>
           {contacts?.map((contact) => (
-            <tr key={contact._id}>
-              <td>{contact.name}</td>
-              <td>{contact.email}</td>
-              <td>{contact.phone}</td>
-              <td>
-                <button className="btn btn-warning btn-sm me-2">Edit</button>
-                <button className="btn btn-danger btn-sm">Delete</button>
-              </td>
-            </tr>
+            <ContactItem key={contact._id} contact={contact} />
           ))}
         </tbody>
       </table>
