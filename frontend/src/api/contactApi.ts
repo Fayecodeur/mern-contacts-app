@@ -12,3 +12,7 @@ export const getContacts = async (): Promise<Contact[]> => {
 
   return response.data.data;
 };
+
+export const deleteContact = async (id: string): Promise<void> => {
+  await api.delete(`/contact/${id}`);
+};
