@@ -16,3 +16,8 @@ export const getContacts = async (): Promise<Contact[]> => {
 export const deleteContact = async (id: string): Promise<void> => {
   await api.delete(`/contacts/${id}`);
 };
+
+export const createContact = async (data: Omit<Contact, "_id">) => {
+  const response = await api.post("/contacts", data);
+  return response.data.data;
+};
