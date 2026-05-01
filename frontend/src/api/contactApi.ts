@@ -14,5 +14,5 @@ export const getContacts = async (): Promise<Contact[]> => {
 };
 
 export const deleteContact = async (id: string): Promise<void> => {
-  await api.delete(`/contact/${id}`);
+  await api.delete(`/contacts/${id}`);
 };
