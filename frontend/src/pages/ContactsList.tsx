@@ -1,6 +1,6 @@
 import ContactItem from "../components/ContactItem";
 import { useContacts } from "../hooks/useContacts";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function ContactsList() {
   const { data: contacts, isLoading, error } = useContacts();
   if (isLoading) {
@@ -15,7 +15,9 @@ export default function ContactsList() {
     <section className="py-3 container">
       <div className="d-flex gap-3 mb-3">
         <h4>Liste des contacts</h4>
-        <button className="btn btn-primary btn-sm">Ajouter</button>
+        <Link to={"/create"} className="btn btn-primary btn-sm">
+          Ajouter
+        </Link>
       </div>
       <table className="table table-sm table-striped table-bordered">
         <thead>
